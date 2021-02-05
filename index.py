@@ -6,7 +6,7 @@ import cgi, os
 files = os.listdir('data')
 listStr = ''
 for item in files:
-    listStr += '<li><a href="index.py?id=(name)">(name)</a></li>'.format(name=item)
+    listStr += '<li><a href="index.py?id={name}">{name}</a></li>'.format(name=item)
 
 form = cgi.FieldStorage()
 if "id" in form:
